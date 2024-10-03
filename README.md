@@ -10,3 +10,12 @@ Built with Django, the project includes features like user authentication, role-
 
 
 
+
+
+![image](https://github.com/user-attachments/assets/f2a633d4-9b7d-43de-a2ff-872e6f25c100)
+
+
+
+
+![image](https://github.com/user-attachments/assets/98207ae1-6198-492c-9a71-812860544f8e)
+
