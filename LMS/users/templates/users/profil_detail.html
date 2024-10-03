@@ -1,0 +1,21 @@
+{% extends 'users/base.html' %} {% load static %} {% block content %}
+<div class="container text-center">
+    <h3>Detail Profil</h3>
+    <p>{{profil}}</p>
+
+    <div class="container">
+        {% for reponse in reponses %}
+        <div class="card">
+            <div class="card-header">
+                {{reponse.question}}
+            </div>
+            <div class="card-body">
+                {{reponse.champ_reponse}}
+            </div>
+        </div>
+        <br><br>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock content %}

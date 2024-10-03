@@ -1,0 +1,37 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="border-top pt-3 text-center">
+    <h2>Les devoirs sont là</h2><br><br><br>
+    <div class="container">
+        <form action="{% url 'afaire' %}" method="post">
+            {%csrf_token%}
+
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        {{question}}
+                    </div>
+
+                    <div class="card-body">
+                        {{reponse.as_p}}
+                    </div>
+
+                </div>
+                <br><br><br>
+
+                <br><br><br>
+                <input class="btn btn-danger" type="submit" value={{button}}>
+        </form>
+
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock content %}

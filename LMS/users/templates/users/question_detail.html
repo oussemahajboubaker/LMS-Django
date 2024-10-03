@@ -1,0 +1,46 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="border-top pt-3 text-center">
+    <h2>Les devoirs sont là</h2><br><br><br>
+
+    <div class="container">
+    {% if not end %}
+         <form action="{% url 'afaire2' index|add:1 %}" method="get">
+
+
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        {{question}}
+                    </div>
+
+                    <div class="card-body">
+                        {{reponse.as_p}}
+                    </div>
+
+                </div>
+                <br><br><br>
+
+                <br><br><br>
+                <input class="btn btn-danger" name="index" id="index" type="submit" value="Suivant">
+        </form>
+{% else %}
+<h2>Vous avez répondu à toutes les questions</h2>
+{% endif %}
+ {% comment %} {{question}}
+    {{reponse.as_p}}
+     <a class="btn btn-danger" href="{% url 'afaire2' index%}"
+        >{{button}}</a> {% endcomment %}
+
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock content %}
